@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/calcFragment"
+        android:name="com.gustavomedeiros.firstapp.view.CalcFragment"
+        android:label="fragment_calc"
+        tools:layout="@layout/fragment_calc" />
+    <fragment
+        android:id="@+id/verificaFragment3"
+        android:name="com.gustavomedeiros.firstapp.view.VerificaFragment"
+        android:label="VerificaFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.gustavomedeiros.firstapp.view.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+</navigation>
