@@ -6,7 +6,7 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/calcFragment"
-        android:name="com.gustavomedeiros.firstapp.view.CalcFragment"
+        android:name="com.gustavomedeiros.firstapp.view.PessoaFragment"
         android:label="fragment_calc"
         tools:layout="@layout/fragment_calc" />
     <fragment
