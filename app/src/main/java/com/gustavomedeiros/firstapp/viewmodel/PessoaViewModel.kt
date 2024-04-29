@@ -2,6 +2,8 @@ package com.gustavomedeiros.firstapp.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.gustavomedeiros.firstapp.service.model.Pessoa
 import com.gustavomedeiros.firstapp.service.repository.PessoaRepository
@@ -10,15 +12,19 @@ import kotlinx.coroutines.launch
 
 class PessoaViewModel (application: Application): AndroidViewModel(application) {
     private val repository = PessoaRepository(application)
+
+    private val mPessoa = MutableLiveData<Pessoa>()
+    val pessoa: LiveData <Pessoa> = mPessoa
+
     fun insert(pessoa: Pessoa) {
         viewModelScope.launch {
             repository.insertPessoa(pessoa)
         }
     }
 
-    fun getPessoa(id: Int){
+    fun getPessoa(id: Int) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.getPessoa(id)
+            mPessoa.postValue(repository.getPessoa(id))
         }
     }
 
@@ -32,5 +38,9 @@ class PessoaViewModel (application: Application): AndroidViewModel(application) 
          repository.deletePessoa(id)
      }
  }
+
+    fun getPessoas() {
+        TODO("Not yet implemented")
+    }
 }
 

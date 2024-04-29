@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
     app:startDestination="@id/homeFragment">
+
     <fragment
-        android:id="@+id/calcFragment"
+        android:id="@+id/pessoaFragment"
         android:name="com.gustavomedeiros.firstapp.view.PessoaFragment"
-        android:label="fragment_calc"
-        tools:layout="@layout/fragment_calc" />
+        android:label="fragment_pessoa"
+        tools:layout="@layout/fragment_pessoa" />
     <fragment
         android:id="@+id/verificaFragment3"
         android:name="com.gustavomedeiros.firstapp.view.VerificaFragment"
@@ -16,6 +17,11 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.gustavomedeiros.firstapp.view.HomeFragment"
-        android:label="fragment_home"
+        android:label="First App"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/allPessoasFragment"
+        android:name="com.gustavomedeiros.firstapp.view.AllPessoasFragment"
+        android:label="Pessoas"
+        tools:layout="@layout/fragment_all_pessoas" />
 </navigation>

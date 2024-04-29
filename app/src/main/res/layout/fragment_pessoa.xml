@@ -6,13 +6,24 @@
     tools:context=".view.PessoaFragment"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvNome"
+    <RadioGroup
+        android:id="@+id/rgSexo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nome: "
-        android:textSize="24sp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+        android:orientation="horizontal">
+    <RadioButton
+        android:id="@+id/rbMasculino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Masculino"
+        android:layout_weight="1"/>
+    <RadioButton
+        android:id="@+id/rbFeminino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Feminino"
+        android:layout_weight="1"/>
+    </RadioGroup>
 
     <EditText
         android:id="@+id/edtNome"
@@ -42,7 +53,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Enviar"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnDeletar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Excluir"
+        android:layout_marginTop="20dp"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:visibility="invisible"/>
 
 </LinearLayout>
 

@@ -12,8 +12,9 @@ import com.gustavomedeiros.firstapp.databinding.ActivityMainBinding
 import java.time.LocalDateTime
 
 class MainActivity : AppCompatActivity() {
-
+//Criar toolbar fodase
     private lateinit var appBarConfiguration: AppBarConfiguration
+    //Criar a navegação, meu pau na sua mao
     private lateinit var navController: NavController
 
     private var _binding: ActivityMainBinding? = null
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding get() = _binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Configurar o binding tomar no cu
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
